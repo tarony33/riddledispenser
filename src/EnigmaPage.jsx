@@ -10,6 +10,7 @@ import { ADSENSE_CLIENT, AD_SLOTS, SITE_URL } from "./config.js";
 const BG = "/fairground.jpg";
 const POSTER = "/poster.jpg";
 const VIDEO_SRC = "/machine.mp4";
+const USE_VIDEO = false; // static poster only for now — source video resolution is too low
 const RIDDLE_SECONDS = 30;
 const GOLD = "#C9A24B", GOLD_HI = "#EBD08A";
 const ACCENT = "#E0342A", GREEN = "#5CE05C";
@@ -145,7 +146,7 @@ export default function EnigmaPage() {
 
       <div style={RENDER ? { ...ui.machineWrap, maxWidth: "100%", width: "100%" } : ui.machineWrap} onClick={tap}>
         <img src={POSTER} alt="The Enigma riddle machine" style={ui.poster} draggable="false" />
-        <video ref={videoRef} src={VIDEO_SRC} style={{ ...ui.video, opacity: vidReady ? 1 : 0 }} muted loop autoPlay playsInline preload="auto" onPlaying={() => setVidReady(true)} />
+        {USE_VIDEO && <video ref={videoRef} src={VIDEO_SRC} style={{ ...ui.video, opacity: vidReady ? 1 : 0 }} muted loop autoPlay playsInline preload="auto" onPlaying={() => setVidReady(true)} />}
         {phase === "hook" && <div style={ui.hook}>Can you solve it?</div>}
         {phase === "idle" && <div style={ui.tapChip}>tap for a riddle &#10022;</div>}
         {working && <div style={ui.working}>summoning&hellip;</div>}
