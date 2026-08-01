@@ -1,0 +1,988 @@
+{
+  "count": 100,
+  "difficulty_mix": {
+    "easy": 35,
+    "medium": 35,
+    "hard": 30
+  },
+  "riddles": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "riddle": "I have keys but open no locks.\nI have space but no room.\nYou can enter, but you can't go outside.\nWhat am I?",
+      "answer": "a keyboard",
+      "accept": [
+        "keyboard"
+      ]
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "riddle": "The more you take,\nthe more you leave behind.\nWhat am I?",
+      "answer": "footsteps",
+      "accept": [
+        "footsteps",
+        "footprints",
+        "steps"
+      ]
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "riddle": "I have a neck but no head,\nand a body but no arms.\nWhat am I?",
+      "answer": "a bottle",
+      "accept": [
+        "bottle"
+      ]
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "riddle": "I have an eye but cannot see.\nI'm sharp, and I help mend what's torn.\nWhat am I?",
+      "answer": "a needle",
+      "accept": [
+        "needle"
+      ]
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "riddle": "I have four legs but cannot walk.\nYou eat your dinner on my back.\nWhat am I?",
+      "answer": "a table",
+      "accept": [
+        "table"
+      ]
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "riddle": "I have teeth but cannot bite.\nI tidy your hair each morning.\nWhat am I?",
+      "answer": "a comb",
+      "accept": [
+        "comb"
+      ]
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "riddle": "The wetter I get,\nthe more I dry you.\nWhat am I?",
+      "answer": "a towel",
+      "accept": [
+        "towel"
+      ]
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "riddle": "You must break me\nbefore you can use me.\nWhat am I?",
+      "answer": "an egg",
+      "accept": [
+        "egg"
+      ]
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "riddle": "I'm tall when I'm young\nand short when I'm old.\nWhat am I?",
+      "answer": "a candle",
+      "accept": [
+        "candle"
+      ]
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "riddle": "I have a thumb and four fingers,\nbut I am not alive.\nWhat am I?",
+      "answer": "a glove",
+      "accept": [
+        "glove"
+      ]
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "riddle": "I have a bed but never sleep,\na mouth but never eat.\nI run, yet I never walk.\nWhat am I?",
+      "answer": "a river",
+      "accept": [
+        "river"
+      ]
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "riddle": "It always goes up\nand never comes down.\nWhat is it?",
+      "answer": "your age",
+      "accept": [
+        "age",
+        "your age"
+      ]
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "riddle": "You can catch me but not throw me,\nand I'll leave you sneezing.\nWhat am I?",
+      "answer": "a cold",
+      "accept": [
+        "cold",
+        "a cold"
+      ]
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "riddle": "I have one head, one foot, and four legs,\nyet I cannot move.\nWhat am I?",
+      "answer": "a bed",
+      "accept": [
+        "bed"
+      ]
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "riddle": "I travel all around the world\nwhile staying in one corner.\nWhat am I?",
+      "answer": "a stamp",
+      "accept": [
+        "stamp"
+      ]
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "riddle": "I'm a building with countless stories,\nyet nothing dramatic happens here.\nWhat am I?",
+      "answer": "a library",
+      "accept": [
+        "library"
+      ]
+    },
+    {
+      "id": 17,
+      "difficulty": "easy",
+      "riddle": "I'm full of words but never speak.\nOpen me and I'll take you anywhere.\nWhat am I?",
+      "answer": "a book",
+      "accept": [
+        "book"
+      ]
+    },
+    {
+      "id": 18,
+      "difficulty": "easy",
+      "riddle": "I have cities but no houses,\nmountains but no trees,\nand water but no fish.\nWhat am I?",
+      "answer": "a map",
+      "accept": [
+        "map"
+      ]
+    },
+    {
+      "id": 19,
+      "difficulty": "easy",
+      "riddle": "I'm full of holes,\nyet I still hold water.\nWhat am I?",
+      "answer": "a sponge",
+      "accept": [
+        "sponge"
+      ]
+    },
+    {
+      "id": 20,
+      "difficulty": "easy",
+      "riddle": "I go up when the rain comes down.\nWhat am I?",
+      "answer": "an umbrella",
+      "accept": [
+        "umbrella"
+      ]
+    },
+    {
+      "id": 21,
+      "difficulty": "easy",
+      "riddle": "I follow you all day\nbut vanish in the dark.\nWhat am I?",
+      "answer": "a shadow",
+      "accept": [
+        "shadow"
+      ]
+    },
+    {
+      "id": 22,
+      "difficulty": "easy",
+      "riddle": "I show you yourself,\nbut your left is my right.\nWhat am I?",
+      "answer": "a mirror",
+      "accept": [
+        "mirror"
+      ]
+    },
+    {
+      "id": 23,
+      "difficulty": "easy",
+      "riddle": "You can hear me and feel me,\nbut you will never see me.\nWhat am I?",
+      "answer": "the wind",
+      "accept": [
+        "wind"
+      ]
+    },
+    {
+      "id": 24,
+      "difficulty": "easy",
+      "riddle": "I go up and down\nbut never move.\nWhat am I?",
+      "answer": "stairs",
+      "accept": [
+        "stairs",
+        "a staircase",
+        "staircase"
+      ]
+    },
+    {
+      "id": 25,
+      "difficulty": "easy",
+      "riddle": "I have many layers,\nand I might make you cry.\nWhat am I?",
+      "answer": "an onion",
+      "accept": [
+        "onion"
+      ]
+    },
+    {
+      "id": 26,
+      "difficulty": "easy",
+      "riddle": "I'm born in winter\nand die in the sun.\nWhat am I?",
+      "answer": "a snowman",
+      "accept": [
+        "snowman"
+      ]
+    },
+    {
+      "id": 27,
+      "difficulty": "easy",
+      "riddle": "I have a face and two hands,\nbut no arms or legs.\nWhat am I?",
+      "answer": "a clock",
+      "accept": [
+        "clock"
+      ]
+    },
+    {
+      "id": 28,
+      "difficulty": "easy",
+      "riddle": "I have many keys\nbut open not a single door.\nWhat am I?",
+      "answer": "a piano",
+      "accept": [
+        "piano"
+      ]
+    },
+    {
+      "id": 29,
+      "difficulty": "easy",
+      "riddle": "I have ears but cannot hear.\nI grow tall in a field.\nWhat am I?",
+      "answer": "corn",
+      "accept": [
+        "corn",
+        "a cornstalk",
+        "cornstalk"
+      ]
+    },
+    {
+      "id": 30,
+      "difficulty": "easy",
+      "riddle": "I have a tongue and a sole,\nbut I never speak or think.\nWhat am I?",
+      "answer": "a boot",
+      "accept": [
+        "boot",
+        "a shoe",
+        "shoe"
+      ]
+    },
+    {
+      "id": 31,
+      "difficulty": "easy",
+      "riddle": "I float in the sky,\nand when I'm heavy I bring rain.\nWhat am I?",
+      "answer": "a cloud",
+      "accept": [
+        "cloud"
+      ]
+    },
+    {
+      "id": 32,
+      "difficulty": "easy",
+      "riddle": "I arch across the sky\nafter the rain, in seven colours.\nWhat am I?",
+      "answer": "a rainbow",
+      "accept": [
+        "rainbow"
+      ]
+    },
+    {
+      "id": 33,
+      "difficulty": "easy",
+      "riddle": "I have bark but never bite,\na trunk but I'm not a car.\nWhat am I?",
+      "answer": "a tree",
+      "accept": [
+        "tree"
+      ]
+    },
+    {
+      "id": 34,
+      "difficulty": "easy",
+      "riddle": "I rise in the east,\nset in the west,\nand give the day its light.\nWhat am I?",
+      "answer": "the sun",
+      "accept": [
+        "sun"
+      ]
+    },
+    {
+      "id": 35,
+      "difficulty": "easy",
+      "riddle": "I twinkle in the dark,\nfar away and small,\nyet I'm a giant ball of fire.\nWhat am I?",
+      "answer": "a star",
+      "accept": [
+        "star"
+      ]
+    },
+    {
+      "id": 36,
+      "difficulty": "medium",
+      "riddle": "I speak without a mouth\nand hear without ears.\nI come alive with the wind.\nWhat am I?",
+      "answer": "an echo",
+      "accept": [
+        "echo"
+      ]
+    },
+    {
+      "id": 37,
+      "difficulty": "medium",
+      "riddle": "What begins and ends with the letter E\nbut holds just one letter inside?",
+      "answer": "an envelope",
+      "accept": [
+        "envelope"
+      ]
+    },
+    {
+      "id": 38,
+      "difficulty": "medium",
+      "riddle": "I'm so fragile that\nsaying my name breaks me.\nWhat am I?",
+      "answer": "silence",
+      "accept": [
+        "silence"
+      ]
+    },
+    {
+      "id": 39,
+      "difficulty": "medium",
+      "riddle": "I have a head and a tail\nbut no body at all.\nWhat am I?",
+      "answer": "a coin",
+      "accept": [
+        "coin"
+      ]
+    },
+    {
+      "id": 40,
+      "difficulty": "medium",
+      "riddle": "I come once in a minute,\ntwice in a moment,\nbut never in a thousand years.\nWhat am I?",
+      "answer": "the letter M",
+      "accept": [
+        "m",
+        "letter m",
+        "the letter m"
+      ]
+    },
+    {
+      "id": 41,
+      "difficulty": "medium",
+      "riddle": "I'm always in front of you\nbut can never be seen.\nWhat am I?",
+      "answer": "the future",
+      "accept": [
+        "future",
+        "the future",
+        "tomorrow"
+      ]
+    },
+    {
+      "id": 42,
+      "difficulty": "medium",
+      "riddle": "You can give me to someone\nand still keep me.\nWhat am I?",
+      "answer": "a promise",
+      "accept": [
+        "promise",
+        "your word",
+        "word"
+      ]
+    },
+    {
+      "id": 43,
+      "difficulty": "medium",
+      "riddle": "The more you take away from me,\nthe bigger I become.\nWhat am I?",
+      "answer": "a hole",
+      "accept": [
+        "hole"
+      ]
+    },
+    {
+      "id": 44,
+      "difficulty": "medium",
+      "riddle": "It belongs to you,\nbut others use it more than you do.\nWhat is it?",
+      "answer": "your name",
+      "accept": [
+        "name",
+        "your name"
+      ]
+    },
+    {
+      "id": 45,
+      "difficulty": "medium",
+      "riddle": "I run through towns and over hills,\nyet I never move an inch.\nWhat am I?",
+      "answer": "a road",
+      "accept": [
+        "road"
+      ]
+    },
+    {
+      "id": 46,
+      "difficulty": "medium",
+      "riddle": "I have a thousand needles\nbut cannot sew.\nI thrive where rain is rare.\nWhat am I?",
+      "answer": "a cactus",
+      "accept": [
+        "cactus"
+      ]
+    },
+    {
+      "id": 47,
+      "difficulty": "medium",
+      "riddle": "I let you look right through a wall\nwithout ever making a hole.\nWhat am I?",
+      "answer": "a window",
+      "accept": [
+        "window"
+      ]
+    },
+    {
+      "id": 48,
+      "difficulty": "medium",
+      "riddle": "I have thirteen hearts\nbut not a single other organ.\nWhat am I?",
+      "answer": "a deck of cards",
+      "accept": [
+        "deck of cards",
+        "cards",
+        "deck",
+        "a pack of cards"
+      ]
+    },
+    {
+      "id": 49,
+      "difficulty": "medium",
+      "riddle": "I'm a tree you can carry\nright in your hand.\nWhat am I?",
+      "answer": "a palm",
+      "accept": [
+        "palm",
+        "palm tree"
+      ]
+    },
+    {
+      "id": 50,
+      "difficulty": "medium",
+      "riddle": "I begin with T, end with T,\nand I'm full of T.\nWhat am I?",
+      "answer": "a teapot",
+      "accept": [
+        "teapot"
+      ]
+    },
+    {
+      "id": 51,
+      "difficulty": "medium",
+      "riddle": "Forwards I am heavy,\nbut backwards I am not.\nWhat word am I?",
+      "answer": "ton",
+      "accept": [
+        "ton"
+      ]
+    },
+    {
+      "id": 52,
+      "difficulty": "medium",
+      "riddle": "I'm the only common word\nwith three double letters in a row.\nWhat am I?",
+      "answer": "bookkeeper",
+      "accept": [
+        "bookkeeper"
+      ]
+    },
+    {
+      "id": 53,
+      "difficulty": "medium",
+      "riddle": "I'm a five-letter word that becomes\nshorter when you add two letters.\nWhat am I?",
+      "answer": "short",
+      "accept": [
+        "short"
+      ]
+    },
+    {
+      "id": 54,
+      "difficulty": "medium",
+      "riddle": "I'm spelled the same wrong way\nin every dictionary.\nWhat word am I?",
+      "answer": "wrong",
+      "accept": [
+        "wrong"
+      ]
+    },
+    {
+      "id": 55,
+      "difficulty": "medium",
+      "riddle": "What two things\ncan you never eat for breakfast?",
+      "answer": "lunch and dinner",
+      "accept": [
+        "lunch and dinner",
+        "dinner and lunch"
+      ]
+    },
+    {
+      "id": 56,
+      "difficulty": "medium",
+      "riddle": "The more of me there is,\nthe less you can see.\nWhat am I?",
+      "answer": "darkness",
+      "accept": [
+        "darkness",
+        "the dark",
+        "dark"
+      ]
+    },
+    {
+      "id": 57,
+      "difficulty": "medium",
+      "riddle": "I sit between your ears\nand grow sharper the more you use me.\nWhat am I?",
+      "answer": "the brain",
+      "accept": [
+        "brain",
+        "your brain",
+        "the mind",
+        "mind"
+      ]
+    },
+    {
+      "id": 58,
+      "difficulty": "medium",
+      "riddle": "I have a heart\nbut I have never loved.\nWhat am I?",
+      "answer": "an artichoke",
+      "accept": [
+        "artichoke"
+      ]
+    },
+    {
+      "id": 59,
+      "difficulty": "medium",
+      "riddle": "I have many branches\nbut no fruit, trunk, or leaves.\nWhat am I?",
+      "answer": "a bank",
+      "accept": [
+        "bank"
+      ]
+    },
+    {
+      "id": 60,
+      "difficulty": "medium",
+      "riddle": "Tell me\nand you no longer have me.\nWhat am I?",
+      "answer": "a secret",
+      "accept": [
+        "secret"
+      ]
+    },
+    {
+      "id": 61,
+      "difficulty": "medium",
+      "riddle": "You can spend me, save me, or waste me,\nbut you can never get me back.\nWhat am I?",
+      "answer": "time",
+      "accept": [
+        "time"
+      ]
+    },
+    {
+      "id": 62,
+      "difficulty": "medium",
+      "riddle": "I'm always coming\nbut I never arrive.\nWhat am I?",
+      "answer": "tomorrow",
+      "accept": [
+        "tomorrow"
+      ]
+    },
+    {
+      "id": 63,
+      "difficulty": "medium",
+      "riddle": "I visit you at night\nand vanish by morning,\nyet I feel completely real.\nWhat am I?",
+      "answer": "a dream",
+      "accept": [
+        "dream"
+      ]
+    },
+    {
+      "id": 64,
+      "difficulty": "medium",
+      "riddle": "Turn me once and it won't open;\nturn me again and it won't close.\nWhat am I?",
+      "answer": "a key",
+      "accept": [
+        "key"
+      ]
+    },
+    {
+      "id": 65,
+      "difficulty": "medium",
+      "riddle": "The more I'm blown,\nthe more attention I draw.\nWhat am I?",
+      "answer": "a whistle",
+      "accept": [
+        "whistle"
+      ]
+    },
+    {
+      "id": 66,
+      "difficulty": "medium",
+      "riddle": "I have eight legs\nbut spin no wheels,\nyet I weave a home from thread.\nWhat am I?",
+      "answer": "a spider",
+      "accept": [
+        "spider"
+      ]
+    },
+    {
+      "id": 67,
+      "difficulty": "medium",
+      "riddle": "I have days and weeks and months,\nbut not a single meal.\nWhat am I?",
+      "answer": "a calendar",
+      "accept": [
+        "calendar"
+      ]
+    },
+    {
+      "id": 68,
+      "difficulty": "medium",
+      "riddle": "I'm found in every sea\nand on every table.\nToo much of me spoils the meal.\nWhat am I?",
+      "answer": "salt",
+      "accept": [
+        "salt"
+      ]
+    },
+    {
+      "id": 69,
+      "difficulty": "medium",
+      "riddle": "Hit me on the head\nand I'll hold two things as one.\nWhat am I?",
+      "answer": "a nail",
+      "accept": [
+        "nail"
+      ]
+    },
+    {
+      "id": 70,
+      "difficulty": "medium",
+      "riddle": "I have many teeth\nbut never bite,\nyet I hold your coat together.\nWhat am I?",
+      "answer": "a zipper",
+      "accept": [
+        "zipper",
+        "zip"
+      ]
+    },
+    {
+      "id": 71,
+      "difficulty": "hard",
+      "riddle": "A man celebrates his birthday\nonly once every four years,\nyet he is not young.\nHow?",
+      "answer": "he was born on February 29",
+      "accept": [
+        "february 29",
+        "feb 29",
+        "leap day",
+        "leap year",
+        "born on a leap day",
+        "leap-year baby",
+        "29th of february"
+      ]
+    },
+    {
+      "id": 72,
+      "difficulty": "hard",
+      "riddle": "I contain twenty-six letters,\nyet I am only three syllables long.\nWhat am I?",
+      "answer": "the alphabet",
+      "accept": [
+        "alphabet"
+      ]
+    },
+    {
+      "id": 73,
+      "difficulty": "hard",
+      "riddle": "I have six faces\nand twenty-one eyes,\nyet I cannot see.\nWhat am I?",
+      "answer": "a die",
+      "accept": [
+        "die",
+        "dice"
+      ]
+    },
+    {
+      "id": 74,
+      "difficulty": "hard",
+      "riddle": "The one who makes me doesn't want me.\nThe one who buys me doesn't need me.\nThe one who uses me never knows.\nWhat am I?",
+      "answer": "a coffin",
+      "accept": [
+        "coffin",
+        "casket"
+      ]
+    },
+    {
+      "id": 75,
+      "difficulty": "hard",
+      "riddle": "I stand without ever growing.\nMy roots are never seen.\nI'm older than the forests\nand crowned in white.\nWhat am I?",
+      "answer": "a mountain",
+      "accept": [
+        "mountain"
+      ]
+    },
+    {
+      "id": 76,
+      "difficulty": "hard",
+      "riddle": "I'm a five-letter word,\nyet remove four letters\nand I still sound the same.\nWhat am I?",
+      "answer": "queue",
+      "accept": [
+        "queue"
+      ]
+    },
+    {
+      "id": 77,
+      "difficulty": "hard",
+      "riddle": "I have a head and a tail,\nI'm brown and small,\nand a hundred of me make a dollar.\nWhat am I?",
+      "answer": "a penny",
+      "accept": [
+        "penny",
+        "a cent",
+        "cent"
+      ]
+    },
+    {
+      "id": 78,
+      "difficulty": "hard",
+      "riddle": "A man pushes his car to a hotel\nand instantly loses his fortune.\nWhat happened?",
+      "answer": "he was playing Monopoly",
+      "accept": [
+        "monopoly",
+        "playing monopoly",
+        "a board game",
+        "monopoly game"
+      ]
+    },
+    {
+      "id": 79,
+      "difficulty": "hard",
+      "riddle": "You can serve me,\nbut you must never eat me.\nWhat am I?",
+      "answer": "a tennis ball",
+      "accept": [
+        "tennis ball",
+        "a ball",
+        "volleyball",
+        "a serve"
+      ]
+    },
+    {
+      "id": 80,
+      "difficulty": "hard",
+      "riddle": "A rider comes to town on Friday,\nstays two nights,\nand leaves on Friday.\nHow?",
+      "answer": "his horse is named Friday",
+      "accept": [
+        "his horse is named friday",
+        "the horse is called friday",
+        "horse named friday",
+        "his horse is friday"
+      ]
+    },
+    {
+      "id": 81,
+      "difficulty": "hard",
+      "riddle": "Two fathers and two sons\ngo fishing and each catches one fish,\nyet only three fish are caught.\nHow?",
+      "answer": "they are a grandfather, father and son",
+      "accept": [
+        "grandfather father and son",
+        "three people",
+        "a grandfather father and son",
+        "three generations",
+        "grandfather father son"
+      ]
+    },
+    {
+      "id": 82,
+      "difficulty": "hard",
+      "riddle": "You can hold me in your left hand\nbut never in your right.\nWhat am I?",
+      "answer": "your right elbow",
+      "accept": [
+        "right elbow",
+        "your right elbow",
+        "right hand",
+        "your right hand"
+      ]
+    },
+    {
+      "id": 83,
+      "difficulty": "hard",
+      "riddle": "A boat full of people sails by,\nyet there's not a single person aboard.\nHow?",
+      "answer": "everyone on board is married",
+      "accept": [
+        "they are all married",
+        "all married",
+        "no single people",
+        "everyone is married",
+        "married"
+      ]
+    },
+    {
+      "id": 84,
+      "difficulty": "hard",
+      "riddle": "Which word\nis always spelled incorrectly?",
+      "answer": "incorrectly",
+      "accept": [
+        "incorrectly"
+      ]
+    },
+    {
+      "id": 85,
+      "difficulty": "hard",
+      "riddle": "If two's company\nand three's a crowd,\nwhat are four and five?",
+      "answer": "nine",
+      "accept": [
+        "nine",
+        "9"
+      ]
+    },
+    {
+      "id": 86,
+      "difficulty": "hard",
+      "riddle": "I can make you laugh or weep,\nI'm born in an instant,\nyet I can last a lifetime.\nWhat am I?",
+      "answer": "a memory",
+      "accept": [
+        "memory"
+      ]
+    },
+    {
+      "id": 87,
+      "difficulty": "hard",
+      "riddle": "I'm lighter than a feather,\nyet no one can hold me\nfor more than a few minutes.\nWhat am I?",
+      "answer": "your breath",
+      "accept": [
+        "breath",
+        "your breath"
+      ]
+    },
+    {
+      "id": 88,
+      "difficulty": "hard",
+      "riddle": "I can be set, broken, or played,\nyet I am never touched.\nWhat am I?",
+      "answer": "a record",
+      "accept": [
+        "record"
+      ]
+    },
+    {
+      "id": 89,
+      "difficulty": "hard",
+      "riddle": "A woman falls from a tall ladder\nyet isn't hurt at all.\nHow?",
+      "answer": "she fell from the bottom rung",
+      "accept": [
+        "bottom rung",
+        "she was on the bottom rung",
+        "the bottom step",
+        "lowest rung",
+        "she fell off the bottom rung"
+      ]
+    },
+    {
+      "id": 90,
+      "difficulty": "hard",
+      "riddle": "In the morning I walk on four,\nat noon on two,\nand in the evening on three.\nWhat am I?",
+      "answer": "a human",
+      "accept": [
+        "human",
+        "a person",
+        "man",
+        "a man",
+        "people",
+        "humans"
+      ]
+    },
+    {
+      "id": 91,
+      "difficulty": "hard",
+      "riddle": "I have a neck but no head,\ntwo arms but no hands.\nWhat am I?",
+      "answer": "a shirt",
+      "accept": [
+        "shirt",
+        "a sweater",
+        "sweater",
+        "a jumper",
+        "jumper"
+      ]
+    },
+    {
+      "id": 92,
+      "difficulty": "hard",
+      "riddle": "What kind of room\nhas no doors and no windows?",
+      "answer": "a mushroom",
+      "accept": [
+        "mushroom"
+      ]
+    },
+    {
+      "id": 93,
+      "difficulty": "hard",
+      "riddle": "I can be measured,\nyet I have no length, width, or height.\nWhat am I?",
+      "answer": "temperature",
+      "accept": [
+        "temperature"
+      ]
+    },
+    {
+      "id": 94,
+      "difficulty": "hard",
+      "riddle": "I appear once in a year,\ntwice in a week,\nbut never in a day.\nWhat am I?",
+      "answer": "the letter E",
+      "accept": [
+        "e",
+        "letter e",
+        "the letter e"
+      ]
+    },
+    {
+      "id": 95,
+      "difficulty": "hard",
+      "riddle": "I'm a six-letter word.\nRemove one letter\nand twelve remain.\nWhat am I?",
+      "answer": "dozens",
+      "accept": [
+        "dozens"
+      ]
+    },
+    {
+      "id": 96,
+      "difficulty": "hard",
+      "riddle": "I can be cracked, made, told, or played.\nWhat am I?",
+      "answer": "a joke",
+      "accept": [
+        "joke"
+      ]
+    },
+    {
+      "id": 97,
+      "difficulty": "hard",
+      "riddle": "I always come down\nbut never go up.\nWhat am I?",
+      "answer": "rain",
+      "accept": [
+        "rain"
+      ]
+    },
+    {
+      "id": 98,
+      "difficulty": "hard",
+      "riddle": "I run all the way around a house\nyet never move a step.\nWhat am I?",
+      "answer": "a fence",
+      "accept": [
+        "fence",
+        "a wall",
+        "wall"
+      ]
+    },
+    {
+      "id": 99,
+      "difficulty": "hard",
+      "riddle": "Where does today\ncome before yesterday?",
+      "answer": "the dictionary",
+      "accept": [
+        "dictionary"
+      ]
+    },
+    {
+      "id": 100,
+      "difficulty": "hard",
+      "riddle": "I'm an odd number.\nTake away one letter\nand I become even.\nWhat am I?",
+      "answer": "seven",
+      "accept": [
+        "seven",
+        "7"
+      ]
+    }
+  ]
+}
