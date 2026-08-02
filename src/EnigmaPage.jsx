@@ -113,7 +113,10 @@ export default function EnigmaPage() {
     if (hit) { clearInterval(tick.current); const st = Math.max(0.1, (Date.now() - startedAt.current) / 1000); setSolveTime(st); setStreak((s) => s + 1); freeze(); setPhase("solved"); speak("Correct. " + riddle.answer, voiceRef.current); }
     else { setGuess(""); setMiss(true); setTimeout(() => setMiss(false), 400); }
   }
-  function copyShare() { const url = SITE_URL ? ("\n\nPlay: " + SITE_URL) : ""; const payload = "\uD83E\uDDE9 Can you solve this?\n\n" + riddle.riddle + "\n\nI got it in " + solveTime.toFixed(1) + "s." + url; navigator.clipboard?.writeText(payload); setCopied(true); setTimeout(() => setCopied(false), 1800); }
+  function shareText() { const url = SITE_URL ? ("\n\nPlay: " + SITE_URL) : ""; return "\uD83E\uDDE9 Can you solve this?\n\n" + riddle.riddle + "\n\nI got it in " + solveTime.toFixed(1) + "s." + url; }
+  function copyShare() { navigator.clipboard?.writeText(shareText()); setCopied(true); setTimeout(() => setCopied(false), 1800); }
+  function shareToX() { window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(shareText()), "_blank", "noopener"); }
+  function shareToWhatsApp() { window.open("https://wa.me/?text=" + encodeURIComponent(shareText()), "_blank", "noopener"); }
   function tap() { if (phase === "working") return; if (phase !== "playing") newRiddle(); }
 
   const working = phase === "working";
@@ -144,31 +147,33 @@ export default function EnigmaPage() {
 
       {!RENDER && <AdUnit slotKey="leaderboard" label="Leaderboard &middot; 728&times;90" wide />}
 
-      <div style={RENDER ? { ...ui.machineWrap, maxWidth: "100%", width: "100%" } : ui.machineWrap} onClick={tap}>
-        <img src={POSTER} alt="The Enigma riddle machine" style={ui.poster} draggable="false" />
-        {USE_VIDEO && <video ref={videoRef} src={VIDEO_SRC} style={{ ...ui.video, opacity: vidReady ? 1 : 0 }} muted loop autoPlay playsInline preload="auto" onPlaying={() => setVidReady(true)} />}
-        {phase === "hook" && <div style={ui.hook}>Can you solve it?</div>}
-        {phase === "idle" && <div style={ui.tapChip}>tap for a riddle &#10022;</div>}
-        {working && <div style={ui.working}>summoning&hellip;</div>}
-        {(phase === "playing" || phase === "solved" || phase === "timeup") && riddle && (
-          <div style={ui.bubble} className="e-pop">
-            <p style={ui.riddleText}>{riddle.riddle}</p>
-            {(phase === "solved" || phase === "timeup") && (
-              <p style={ui.answerText}>{phase === "solved" ? "\u2713 " + riddle.answer : "Answer: " + riddle.answer}</p>
-            )}
-            <span style={ui.bubbleTail} />
-          </div>
-        )}
-        {phase === "playing" && (
-          <div style={ui.timerBar}>
-            <div style={{ ...ui.timerFill, width: (left / RIDDLE_SECONDS * 100) + "%", background: left < 6 ? ACCENT : GOLD_HI }} />
-            <span style={ui.timerNum}>{Math.ceil(left)}s</span>
-          </div>
-        )}
+      <div className={RENDER ? undefined : "mWrapOuter"} style={RENDER ? { width: "100%", maxWidth: "100%" } : ui.machineWrapOuter} onClick={tap}>
+        <div style={ui.machineWrap}>
+          <img src={POSTER} alt="The Enigma riddle machine" style={ui.poster} draggable="false" />
+          {USE_VIDEO && <video ref={videoRef} src={VIDEO_SRC} style={{ ...ui.video, opacity: vidReady ? 1 : 0 }} muted loop autoPlay playsInline preload="auto" onPlaying={() => setVidReady(true)} />}
+          {phase === "hook" && <div style={ui.hook}>Can you solve it?</div>}
+          {phase === "idle" && <div style={ui.tapChip}>tap for a riddle &#10022;</div>}
+          {working && <div style={ui.working}>summoning&hellip;</div>}
+          {(phase === "playing" || phase === "solved" || phase === "timeup") && riddle && (
+            <div style={ui.bubble} className="e-pop">
+              <p style={ui.riddleText}>{riddle.riddle}</p>
+              {(phase === "solved" || phase === "timeup") && (
+                <p style={ui.answerText}>{phase === "solved" ? "\u2713 " + riddle.answer : "Answer: " + riddle.answer}</p>
+              )}
+              <span style={ui.bubbleTail} />
+            </div>
+          )}
+          {phase === "playing" && (
+            <div style={ui.timerBar}>
+              <div style={{ ...ui.timerFill, width: (left / RIDDLE_SECONDS * 100) + "%", background: left < 6 ? ACCENT : GOLD_HI }} />
+              <span style={ui.timerNum}>{Math.ceil(left)}s</span>
+            </div>
+          )}
+        </div>
       </div>
 
       {!RENDER && (
-        <div style={ui.controls}>
+        <div className="mWrapOuter" style={ui.controls}>
           {phase === "idle" && (<><button style={askBtn} onClick={newRiddle}>&#9679; ASK A RIDDLE</button><span style={ui.tokenNote}>&#9672; free to play</span></>)}
           {working && <p style={ui.workNote} className="e-flicker">summoning a riddle&hellip;</p>}
           {phase === "playing" && (
@@ -180,7 +185,9 @@ export default function EnigmaPage() {
           {phase === "solved" && (
             <div style={ui.row}>
               <span style={ui.streak}>SOLVED in {solveTime.toFixed(1)}s &middot; STREAK <b style={{ color: GREEN }}>{streak}</b></span>
-              <button style={shareBtn} onClick={copyShare}>{copied ? "Copied &mdash; challenge them" : "Share the challenge"}</button>
+              <button style={shareBtn} onClick={copyShare}>{copied ? "Copied — challenge them" : "Share the challenge"}</button>
+              <button style={iconBtn} onClick={shareToX} aria-label="Share on X" title="Share on X">𝕏</button>
+              <button style={iconBtn} onClick={shareToWhatsApp} aria-label="Share on WhatsApp" title="Share on WhatsApp">💬</button>
               <button style={ghost} onClick={newRiddle}>Next &rarr;</button>
             </div>
           )}
@@ -315,6 +322,7 @@ function makeCarnival() {
 const askBtn = { width: "100%", background: "linear-gradient(180deg, #F0463A, #B01E16)", color: "#FFF3F1", border: "none", borderRadius: 10, padding: "13px 18px", fontWeight: 700, fontSize: 15, letterSpacing: 1.5, cursor: "pointer", fontFamily: "inherit", boxShadow: "0 0 16px rgba(224,52,42,0.4)" };
 const shareBtn = { background: ACCENT, color: "#FFF3F1", border: "none", borderRadius: 999, padding: "10px 16px", fontWeight: 700, fontSize: 13, cursor: "pointer", fontFamily: "inherit" };
 const ghost = { background: "transparent", color: GOLD_HI, border: `1.5px solid ${GOLD}`, borderRadius: 999, padding: "10px 16px", fontSize: 13, cursor: "pointer", fontFamily: "inherit" };
+const iconBtn = { background: "rgba(0,0,0,0.3)", color: GOLD_HI, border: `1px solid ${GOLD}`, borderRadius: 999, width: 34, height: 34, display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 15, cursor: "pointer", fontFamily: "inherit", padding: 0 };
 const pill = (on) => ({ background: on ? "rgba(201,162,75,0.2)" : "rgba(0,0,0,0.3)", color: on ? GOLD_HI : "#9C8A66", border: `1px solid ${on ? GOLD : "#5A4A2E"}`, borderRadius: 999, padding: "6px 12px", fontSize: 12, cursor: "pointer", fontFamily: "inherit" });
 
 const ui = {
@@ -329,7 +337,8 @@ const ui = {
   tags: { margin: "10px 0 0", color: GOLD_HI, fontSize: 13, letterSpacing: 2, textTransform: "uppercase", textShadow: "0 1px 3px rgba(0,0,0,0.8)" },
   invite: { margin: "6px auto 0", color: "#E4D3B4", fontStyle: "italic", fontSize: 14, maxWidth: 320, lineHeight: 1.4, textShadow: "0 1px 3px rgba(0,0,0,0.8)" },
 
-  machineWrap: { position: "relative", width: "100%", maxWidth: 340, cursor: "pointer", lineHeight: 0 },
+  machineWrapOuter: { width: "100%", boxSizing: "border-box", cursor: "pointer", padding: 14, background: "rgba(10,8,14,0.45)", border: "1.5px solid rgba(201,162,75,0.35)", borderRadius: 18, boxShadow: "0 14px 34px rgba(0,0,0,0.5)", backdropFilter: "blur(2px)" },
+  machineWrap: { position: "relative", width: "100%", lineHeight: 0 },
   poster: { width: "100%", height: "auto", display: "block", borderRadius: 10, filter: "drop-shadow(0 16px 32px rgba(0,0,0,0.7))" },
   video: { position: "absolute", top: 0, left: 0, width: "100%", height: "100%", objectFit: "cover", display: "block", borderRadius: 10, transition: "opacity 0.3s", zIndex: 1 },
   tapChip: { position: "absolute", bottom: "16%", left: "50%", transform: "translateX(-50%)", background: "rgba(0,0,0,0.62)", color: GOLD_HI, fontSize: 12, letterSpacing: 2, padding: "5px 12px", borderRadius: 999, border: `1px solid ${GOLD}`, whiteSpace: "nowrap", zIndex: 3 },
@@ -342,7 +351,7 @@ const ui = {
   timerFill: { position: "absolute", left: 0, top: 0, bottom: 0, transition: "width 0.1s linear, background 0.3s", opacity: 0.85 },
   timerNum: { position: "relative", margin: "0 auto", fontFamily: "ui-monospace, monospace", fontSize: 15, color: "#fff", fontWeight: 700, letterSpacing: 1, textShadow: "0 1px 2px rgba(0,0,0,0.9)" },
 
-  controls: { width: "100%", maxWidth: 340, background: "rgba(10,8,14,0.55)", border: "1px solid rgba(201,162,75,0.32)", borderRadius: 12, padding: 12, display: "flex", flexDirection: "column", gap: 8, boxShadow: "0 10px 26px rgba(0,0,0,0.45)", backdropFilter: "blur(3px)" },
+  controls: { width: "100%", background: "rgba(10,8,14,0.55)", border: "1px solid rgba(201,162,75,0.32)", borderRadius: 12, padding: 12, display: "flex", flexDirection: "column", gap: 8, boxShadow: "0 10px 26px rgba(0,0,0,0.45)", backdropFilter: "blur(3px)" },
   row: { display: "flex", gap: 8, justifyContent: "center", flexWrap: "wrap", alignItems: "center" },
   input: { flex: 1, minWidth: 150, background: "rgba(6,4,8,0.7)", color: "#F3E9D2", border: `1.5px solid ${GOLD}`, borderRadius: 8, padding: "11px 12px", fontSize: 15, fontFamily: "inherit", outline: "none", boxSizing: "border-box" },
   tokenNote: { textAlign: "center", color: "#CBB98C", fontSize: 11, letterSpacing: 1, fontFamily: "ui-monospace, monospace" },
@@ -384,4 +393,5 @@ input::placeholder { color: #8C7A58; }
 @media (prefers-reduced-motion: reduce){ .e-bulb,.e-glow,.e-pop,.e-flicker,.e-shake{ animation: none !important; } }
 .hAdLB { display: flex; align-items: center; gap: 14px; }
 @media (max-width: 480px) { .hAdLB { flex-direction: column; align-items: flex-start; gap: 8px; min-height: auto; } }
+.mWrapOuter { max-width: 340px; }
 `;
