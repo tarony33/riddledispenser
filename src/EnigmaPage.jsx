@@ -194,7 +194,7 @@ export default function EnigmaPage() {
   );
 }
 
-function AdUnit({ slotKey, label, wide }) {
+function AdUnit({ slotKey, wide }) {
   const client = ADSENSE_CLIENT, slot = AD_SLOTS[slotKey];
   useEffect(() => {
     if (!client || !slot) return;
@@ -208,20 +208,60 @@ function AdUnit({ slotKey, label, wide }) {
     try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch (e) {}
   }, []);
   if (!client || !slot) {
-    return (
-      <div style={{ ...ui.adSlot, maxWidth: wide ? 620 : 300 }}>
-        <span style={ui.adTag}>AD</span>
-        <div style={{ textAlign: "center" }}>
-          <span style={ui.adLabel}>Sponsor billboard &mdash; banner slot</span>
-          <span style={ui.adDims} dangerouslySetInnerHTML={{ __html: label }} />
-        </div>
-      </div>
-    );
+    return <HouseAd wide={wide} />;
   }
   return (
     <div style={{ width: "100%", maxWidth: wide ? 728 : 300, minHeight: wide ? 90 : 250 }}>
       <ins className="adsbygoogle" style={{ display: "block" }} data-ad-client={client} data-ad-slot={slot} data-ad-format="auto" data-full-width-responsive="true" />
     </div>
+  );
+}
+
+// House ad — ReviewCatcher self-promo shown in the AdSense slots until ADSENSE_CLIENT/AD_SLOTS are filled in (src/config.js)
+function ReviewCatcherLogo({ size }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 30 30" fill="none" style={{ flexShrink: 0 }}>
+      <rect x="1" y="2" width="28" height="21" rx="7" fill="#fff" />
+      <path d="M9 23l-3 5 8-4z" fill="#fff" />
+      <g fill="#185FA5">
+        <circle cx="9" cy="12" r="2" />
+        <circle cx="15" cy="12" r="2.4" />
+        <circle cx="21" cy="12" r="2" />
+      </g>
+    </svg>
+  );
+}
+
+function HouseAd({ wide }) {
+  const href = "https://reviewcatcher.ie/";
+  if (wide) {
+    return (
+      <a href={href} target="_blank" rel="noopener sponsored" className="hAdLB" style={houseAd.leaderboard}>
+        <span style={houseAd.tag}>AD</span>
+        <span style={houseAd.brandCol}>
+          <ReviewCatcherLogo size={26} />
+          <span style={houseAd.brandName}>ReviewCatcher</span>
+        </span>
+        <span style={houseAd.copyWrap}>
+          <span style={houseAd.headline}>More Google reviews, on autopilot</span>
+          <span style={houseAd.subhead}>Review requests &amp; replies for local businesses</span>
+        </span>
+        <span style={houseAd.cta}>Free audit &rarr;</span>
+      </a>
+    );
+  }
+  return (
+    <a href={href} target="_blank" rel="noopener sponsored" style={houseAd.rect}>
+      <span style={houseAd.tag}>AD</span>
+      <span style={houseAd.brandRow}>
+        <ReviewCatcherLogo size={30} />
+        <span style={houseAd.brandNameLg}>ReviewCatcher</span>
+      </span>
+      <span style={houseAd.rectHeadline}>More reviews.<br />Higher ranking.</span>
+      <span style={houseAd.rectSub}>Automated Google review requests &amp; replies for growing local businesses.</span>
+      <span style={houseAd.cta}>Get a free review audit &rarr;</span>
+      <span style={houseAd.url}>reviewcatcher.ie</span>
+    </a>
   );
 }
 
@@ -310,10 +350,23 @@ const ui = {
   streak: { fontFamily: "ui-monospace, monospace", fontSize: 12, color: "#CBB98C", letterSpacing: 1 },
   err: { color: "#E8908A", margin: "0 0 8px", fontSize: 14, textAlign: "center" },
 
-  adSlot: { width: "100%", position: "relative", minHeight: 58, border: "1px dashed rgba(201,162,75,0.5)", borderRadius: 12, background: "rgba(10,8,14,0.4)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "10px 12px", boxSizing: "border-box", backdropFilter: "blur(2px)" },
-  adTag: { position: "absolute", top: 6, left: 8, fontSize: 9, letterSpacing: 1, color: "#0A0810", background: GOLD, borderRadius: 3, padding: "1px 6px", fontWeight: 700 },
-  adLabel: { display: "block", color: GOLD_HI, fontSize: 13, letterSpacing: 1 },
-  adDims: { display: "block", color: "#9C7B4A", fontSize: 11, marginTop: 2, letterSpacing: 1, fontFamily: "ui-monospace, monospace" },
+};
+
+const houseAd = {
+  leaderboard: { position: "relative", textDecoration: "none", width: "100%", maxWidth: 620, minHeight: 90, background: "linear-gradient(100deg,#185FA5,#378ADD)", borderRadius: 12, padding: "12px 16px", boxSizing: "border-box", boxShadow: "0 8px 22px rgba(0,0,0,0.45)", overflow: "hidden" },
+  rect: { position: "relative", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 7, textDecoration: "none", width: "100%", maxWidth: 300, minHeight: 250, background: "linear-gradient(160deg,#185FA5,#378ADD)", borderRadius: 14, padding: "20px 18px", boxSizing: "border-box", boxShadow: "0 8px 22px rgba(0,0,0,0.45)", textAlign: "center" },
+  tag: { position: "absolute", top: 6, left: 8, fontSize: 9, letterSpacing: 1, color: "#185FA5", background: "#DCEBFB", borderRadius: 3, padding: "1px 6px", fontWeight: 700, fontFamily: "system-ui, sans-serif" },
+  brandCol: { display: "flex", alignItems: "center", gap: 6, flexShrink: 0, fontFamily: "system-ui, sans-serif" },
+  brandName: { color: "#fff", fontWeight: 800, fontSize: 15 },
+  brandRow: { display: "flex", alignItems: "center", gap: 8, marginBottom: 4, fontFamily: "system-ui, sans-serif" },
+  brandNameLg: { color: "#fff", fontWeight: 800, fontSize: 21 },
+  copyWrap: { flex: 1, minWidth: 0, fontFamily: "system-ui, sans-serif" },
+  headline: { display: "block", color: "#fff", fontWeight: 800, fontSize: 17, lineHeight: 1.15 },
+  subhead: { display: "block", color: "#DCEBFB", fontSize: 12, marginTop: 3 },
+  rectHeadline: { color: "#fff", fontWeight: 800, fontSize: 20, lineHeight: 1.2, marginTop: 6, fontFamily: "system-ui, sans-serif" },
+  rectSub: { color: "#DCEBFB", fontSize: 12.5, lineHeight: 1.4, marginTop: 6, maxWidth: 245, fontFamily: "system-ui, sans-serif" },
+  cta: { background: "#FFD21A", color: "#123252", fontFamily: "system-ui, sans-serif", fontWeight: 800, fontSize: 13, padding: "9px 16px", borderRadius: 999, whiteSpace: "nowrap", flexShrink: 0, boxShadow: "0 2px 8px rgba(0,0,0,0.25)" },
+  url: { color: "#DCEBFB", fontFamily: "ui-monospace, monospace", fontSize: 11, letterSpacing: 0.5, marginTop: 2 },
 };
 
 const css = `
@@ -329,4 +382,6 @@ const css = `
 @keyframes eShake { 0%,100%{ transform: translateX(0); } 25%{ transform: translateX(-5px); } 75%{ transform: translateX(5px); } }
 input::placeholder { color: #8C7A58; }
 @media (prefers-reduced-motion: reduce){ .e-bulb,.e-glow,.e-pop,.e-flicker,.e-shake{ animation: none !important; } }
+.hAdLB { display: flex; align-items: center; gap: 14px; }
+@media (max-width: 480px) { .hAdLB { flex-direction: column; align-items: flex-start; gap: 8px; min-height: auto; } }
 `;
