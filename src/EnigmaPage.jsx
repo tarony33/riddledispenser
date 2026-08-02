@@ -113,7 +113,7 @@ export default function EnigmaPage() {
     if (hit) { clearInterval(tick.current); const st = Math.max(0.1, (Date.now() - startedAt.current) / 1000); setSolveTime(st); setStreak((s) => s + 1); freeze(); setPhase("solved"); speak("Correct. " + riddle.answer, voiceRef.current); }
     else { setGuess(""); setMiss(true); setTimeout(() => setMiss(false), 400); }
   }
-  function shareText() { const url = SITE_URL ? ("\n\nPlay: " + SITE_URL) : ""; return "\uD83E\uDDE9 Can you solve this?\n\n" + riddle.riddle + "\n\nI got it in " + solveTime.toFixed(1) + "s." + url; }
+  function shareText() { const url = SITE_URL ? ("\n\nVisit: " + SITE_URL) : ""; return "\uD83E\uDDE9 Can you solve this?\n\n" + riddle.riddle + "\n\nI got it in " + solveTime.toFixed(1) + "s." + url; }
   function copyShare() { navigator.clipboard?.writeText(shareText()); setCopied(true); setTimeout(() => setCopied(false), 1800); }
   function shareToX() { window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(shareText()), "_blank", "noopener"); }
   function shareToWhatsApp() { window.open("https://wa.me/?text=" + encodeURIComponent(shareText()), "_blank", "noopener"); }

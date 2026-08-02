@@ -11,4 +11,4 @@ export const AD_SLOTS = {
 };
 
 // Optional: your live site URL, used in the "share" text so people can come back.
-export const SITE_URL = "";
+export const SITE_URL = "https://riddledispenser.com";
