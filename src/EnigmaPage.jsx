@@ -393,5 +393,7 @@ input::placeholder { color: #8C7A58; }
 @media (prefers-reduced-motion: reduce){ .e-bulb,.e-glow,.e-pop,.e-flicker,.e-shake{ animation: none !important; } }
 .hAdLB { display: flex; align-items: center; gap: 14px; }
 @media (max-width: 480px) { .hAdLB { flex-direction: column; align-items: flex-start; gap: 8px; min-height: auto; } }
-.mWrapOuter { max-width: 340px; }
+.mWrapOuter { max-width: min(94vw, 420px); }
+@media (min-width: 640px) { .mWrapOuter { max-width: 520px; } }
+@media (min-width: 1000px) { .mWrapOuter { max-width: 600px; } }
 `;
