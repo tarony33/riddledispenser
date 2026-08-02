@@ -8,7 +8,7 @@ import { ADSENSE_CLIENT, AD_SLOTS, SITE_URL } from "./config.js";
 // (/?render=1&r=<riddle>&a=<answer>&t=30) drives the 30s clip exporter.
 
 const BG = "/fairground.jpg";
-const POSTER = "/poster.jpg";
+const POSTER = "/poster.png";
 const VIDEO_SRC = "/machine.mp4";
 const USE_VIDEO = false; // static poster only for now — source video resolution is too low
 const RIDDLE_SECONDS = 30;
