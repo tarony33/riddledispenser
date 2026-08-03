@@ -10,7 +10,7 @@ import { ADSENSE_CLIENT, AD_SLOTS, SITE_URL } from "./config.js";
 const BG = "/fairground.jpg";
 const POSTER = "/poster.png";
 const VIDEO_SRC = "/machine.mp4";
-const USE_VIDEO = false; // static poster only for now — source video resolution is too low
+const USE_VIDEO = true; // new higher-quality animation loop
 const RIDDLE_SECONDS = 30;
 const GOLD = "#C9A24B", GOLD_HI = "#EBD08A";
 const ACCENT = "#E0342A", GREEN = "#5CE05C";

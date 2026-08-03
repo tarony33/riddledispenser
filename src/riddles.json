@@ -1,9 +1,9 @@
 {
-  "count": 100,
+  "count": 150,
   "difficulty_mix": {
-    "easy": 35,
-    "medium": 35,
-    "hard": 30
+    "easy": 50,
+    "medium": 55,
+    "hard": 45
   },
   "riddles": [
     {
@@ -507,10 +507,13 @@
     {
       "id": 54,
       "difficulty": "medium",
-      "riddle": "I'm spelled the same wrong way\nin every dictionary.\nWhat word am I?",
-      "answer": "wrong",
+      "riddle": "I have a ring but no finger,\nand when I ring, you answer.\nWhat am I?",
+      "answer": "a telephone",
       "accept": [
-        "wrong"
+        "telephone",
+        "phone",
+        "a phone",
+        "mobile"
       ]
     },
     {
@@ -764,26 +767,27 @@
     {
       "id": 80,
       "difficulty": "hard",
-      "riddle": "A rider comes to town on Friday,\nstays two nights,\nand leaves on Friday.\nHow?",
+      "riddle": "A cowboy rides into town on Friday,\nstays three days,\nand rides out again on Friday.\nHow?",
       "answer": "his horse is named Friday",
       "accept": [
         "his horse is named friday",
         "the horse is called friday",
         "horse named friday",
-        "his horse is friday"
+        "his horse is friday",
+        "friday is the horse"
       ]
     },
     {
       "id": 81,
       "difficulty": "hard",
-      "riddle": "Two fathers and two sons\ngo fishing and each catches one fish,\nyet only three fish are caught.\nHow?",
-      "answer": "they are a grandfather, father and son",
+      "riddle": "Two fathers and two sons\ngo fishing, and each catches a fish,\nyet only three fish are caught.\nHow?",
+      "answer": "a grandfather, father and son",
       "accept": [
         "grandfather father and son",
         "three people",
-        "a grandfather father and son",
+        "grandfather father son",
         "three generations",
-        "grandfather father son"
+        "two fathers and two sons"
       ]
     },
     {
@@ -982,6 +986,492 @@
       "accept": [
         "seven",
         "7"
+      ]
+    },
+    {
+      "id": 101,
+      "difficulty": "easy",
+      "riddle": "I leave a mark wherever I go\nand grow shorter as I'm used.\nA rubber undoes my work.\nWhat am I?",
+      "answer": "a pencil",
+      "accept": [
+        "pencil"
+      ]
+    },
+    {
+      "id": 102,
+      "difficulty": "easy",
+      "riddle": "I tick upon your wrist all day\nand tell you when it's time.\nWhat am I?",
+      "answer": "a watch",
+      "accept": [
+        "watch"
+      ]
+    },
+    {
+      "id": 103,
+      "difficulty": "easy",
+      "riddle": "I have a sharp edge and a handle,\nand I slice your bread and meat.\nWhat am I?",
+      "answer": "a knife",
+      "accept": [
+        "knife"
+      ]
+    },
+    {
+      "id": 104,
+      "difficulty": "easy",
+      "riddle": "Two blades joined at the hip,\nI cut but I am not a knife.\nWhat am I?",
+      "answer": "scissors",
+      "accept": [
+        "scissors",
+        "a pair of scissors"
+      ]
+    },
+    {
+      "id": 105,
+      "difficulty": "easy",
+      "riddle": "I visit your mouth twice a day\nto keep your smile clean,\nyet I am not food.\nWhat am I?",
+      "answer": "a toothbrush",
+      "accept": [
+        "toothbrush"
+      ]
+    },
+    {
+      "id": 106,
+      "difficulty": "easy",
+      "riddle": "The more I wash, the smaller I get,\nand I leave you clean and fresh.\nWhat am I?",
+      "answer": "soap",
+      "accept": [
+        "soap",
+        "a bar of soap"
+      ]
+    },
+    {
+      "id": 107,
+      "difficulty": "easy",
+      "riddle": "I am water turned hard and cold,\nand I melt away in the sun.\nWhat am I?",
+      "answer": "ice",
+      "accept": [
+        "ice",
+        "an ice cube"
+      ]
+    },
+    {
+      "id": 108,
+      "difficulty": "easy",
+      "riddle": "I buzz from flower to flower,\nI make honey, and I can sting.\nWhat am I?",
+      "answer": "a bee",
+      "accept": [
+        "bee"
+      ]
+    },
+    {
+      "id": 109,
+      "difficulty": "easy",
+      "riddle": "I have rungs but I am not a wheel,\nand I help you climb up high.\nWhat am I?",
+      "answer": "a ladder",
+      "accept": [
+        "ladder"
+      ]
+    },
+    {
+      "id": 110,
+      "difficulty": "easy",
+      "riddle": "Beat me and I make a sound.\nI am hollow, round, and loud.\nWhat am I?",
+      "answer": "a drum",
+      "accept": [
+        "drum"
+      ]
+    },
+    {
+      "id": 111,
+      "difficulty": "easy",
+      "riddle": "Blow me up and I will rise;\nprick me and I pop and die.\nWhat am I?",
+      "answer": "a balloon",
+      "accept": [
+        "balloon"
+      ]
+    },
+    {
+      "id": 112,
+      "difficulty": "easy",
+      "riddle": "I dance in the sky on a string\nwhenever the wind will blow.\nWhat am I?",
+      "answer": "a kite",
+      "accept": [
+        "kite"
+      ]
+    },
+    {
+      "id": 113,
+      "difficulty": "easy",
+      "riddle": "I come as a pair on your feet,\nsoft and warm inside your shoes.\nWhat am I?",
+      "answer": "a sock",
+      "accept": [
+        "sock",
+        "socks",
+        "a pair of socks"
+      ]
+    },
+    {
+      "id": 114,
+      "difficulty": "easy",
+      "riddle": "I wave in the wind on a pole,\nand I stand for a country.\nWhat am I?",
+      "answer": "a flag",
+      "accept": [
+        "flag"
+      ]
+    },
+    {
+      "id": 115,
+      "difficulty": "easy",
+      "riddle": "I carry my house on my back,\nand I am terribly slow.\nWhat am I?",
+      "answer": "a snail",
+      "accept": [
+        "snail"
+      ]
+    },
+    {
+      "id": 116,
+      "difficulty": "medium",
+      "riddle": "I need air to live,\nbut water is my death.\nFeed me and I grow;\ngive me a drink and I die.\nWhat am I?",
+      "answer": "fire",
+      "accept": [
+        "fire"
+      ]
+    },
+    {
+      "id": 117,
+      "difficulty": "medium",
+      "riddle": "I hold great ships in place.\nI am heavy, and I sink to hold.\nWhat am I?",
+      "answer": "an anchor",
+      "accept": [
+        "anchor"
+      ]
+    },
+    {
+      "id": 118,
+      "difficulty": "medium",
+      "riddle": "I connect two sides\nand let you cross the water\nwithout ever getting wet.\nWhat am I?",
+      "answer": "a bridge",
+      "accept": [
+        "bridge"
+      ]
+    },
+    {
+      "id": 119,
+      "difficulty": "medium",
+      "riddle": "I float and shimmer in the air;\ntouch me and I disappear.\nWhat am I?",
+      "answer": "a bubble",
+      "accept": [
+        "bubble"
+      ]
+    },
+    {
+      "id": 120,
+      "difficulty": "medium",
+      "riddle": "I always point to the north\nand guide the lost back home.\nWhat am I?",
+      "answer": "a compass",
+      "accept": [
+        "compass"
+      ]
+    },
+    {
+      "id": 121,
+      "difficulty": "medium",
+      "riddle": "Turn me over and sand will run\nto measure the passing time.\nWhat am I?",
+      "answer": "an hourglass",
+      "accept": [
+        "hourglass"
+      ]
+    },
+    {
+      "id": 122,
+      "difficulty": "medium",
+      "riddle": "I pull metal toward myself\nwithout ever touching it.\nWhat am I?",
+      "answer": "a magnet",
+      "accept": [
+        "magnet"
+      ]
+    },
+    {
+      "id": 123,
+      "difficulty": "medium",
+      "riddle": "I freeze a single moment\nso you can keep it forever.\nWhat am I?",
+      "answer": "a photograph",
+      "accept": [
+        "photograph",
+        "photo",
+        "a photo",
+        "a picture",
+        "picture"
+      ]
+    },
+    {
+      "id": 124,
+      "difficulty": "medium",
+      "riddle": "I keep your door shut tight,\nand only a key sets me free.\nWhat am I?",
+      "answer": "a lock",
+      "accept": [
+        "lock"
+      ]
+    },
+    {
+      "id": 125,
+      "difficulty": "medium",
+      "riddle": "Many links make me strong,\nand I bind and pull as one.\nWhat am I?",
+      "answer": "a chain",
+      "accept": [
+        "chain"
+      ]
+    },
+    {
+      "id": 126,
+      "difficulty": "medium",
+      "riddle": "I go round and round all day,\nand the open road is my home.\nWhat am I?",
+      "answer": "a wheel",
+      "accept": [
+        "wheel"
+      ]
+    },
+    {
+      "id": 127,
+      "difficulty": "medium",
+      "riddle": "I store up power for later\nand slowly I run down.\nWhat am I?",
+      "answer": "a battery",
+      "accept": [
+        "battery"
+      ]
+    },
+    {
+      "id": 128,
+      "difficulty": "medium",
+      "riddle": "I sleep for years, then wake\nto pour out fire and ash.\nWhat am I?",
+      "answer": "a volcano",
+      "accept": [
+        "volcano"
+      ]
+    },
+    {
+      "id": 129,
+      "difficulty": "medium",
+      "riddle": "I rise when it is hot\nand fall when it is cold,\nyet I have no legs at all.\nWhat am I?",
+      "answer": "a thermometer",
+      "accept": [
+        "thermometer"
+      ]
+    },
+    {
+      "id": 130,
+      "difficulty": "medium",
+      "riddle": "I am the quietest way to speak,\nmeant for one ear alone.\nWhat am I?",
+      "answer": "a whisper",
+      "accept": [
+        "whisper"
+      ]
+    },
+    {
+      "id": 131,
+      "difficulty": "medium",
+      "riddle": "I pull everything down to earth,\nyet you can never see me.\nWhat am I?",
+      "answer": "gravity",
+      "accept": [
+        "gravity"
+      ]
+    },
+    {
+      "id": 132,
+      "difficulty": "medium",
+      "riddle": "I spread from mouth to mouth,\noften untrue and hard to stop.\nWhat am I?",
+      "answer": "a rumour",
+      "accept": [
+        "rumour",
+        "rumor",
+        "a rumor",
+        "gossip"
+      ]
+    },
+    {
+      "id": 133,
+      "difficulty": "medium",
+      "riddle": "I am born inside your mind,\nand I can change the whole world.\nWhat am I?",
+      "answer": "an idea",
+      "accept": [
+        "idea"
+      ]
+    },
+    {
+      "id": 134,
+      "difficulty": "medium",
+      "riddle": "I can fill a whole room,\nyet I weigh nothing at all.\nWhat am I?",
+      "answer": "light",
+      "accept": [
+        "light"
+      ]
+    },
+    {
+      "id": 135,
+      "difficulty": "medium",
+      "riddle": "I rise from a fire without form,\nand the wind can scatter me away.\nWhat am I?",
+      "answer": "smoke",
+      "accept": [
+        "smoke"
+      ]
+    },
+    {
+      "id": 136,
+      "difficulty": "hard",
+      "riddle": "A plane crashes exactly on the border\nof two countries.\nWhere do you bury the survivors?",
+      "answer": "you don't bury survivors",
+      "accept": [
+        "you dont bury survivors",
+        "nowhere",
+        "you do not bury survivors",
+        "survivors arent buried"
+      ]
+    },
+    {
+      "id": 137,
+      "difficulty": "hard",
+      "riddle": "I am a five-letter word.\nRemove two letters\nand only one remains.\nWhat am I?",
+      "answer": "stone",
+      "accept": [
+        "stone"
+      ]
+    },
+    {
+      "id": 138,
+      "difficulty": "hard",
+      "riddle": "Which is heavier:\na pound of feathers\nor a pound of bricks?",
+      "answer": "they weigh the same",
+      "accept": [
+        "the same",
+        "they are the same",
+        "equal",
+        "same weight",
+        "neither"
+      ]
+    },
+    {
+      "id": 139,
+      "difficulty": "hard",
+      "riddle": "How many months of the year\nhave twenty-eight days?",
+      "answer": "all of them",
+      "accept": [
+        "all of them",
+        "all twelve",
+        "twelve",
+        "12",
+        "all"
+      ]
+    },
+    {
+      "id": 140,
+      "difficulty": "hard",
+      "riddle": "A rooster sits on the peak of a barn\nand lays an egg.\nWhich way does it roll?",
+      "answer": "roosters don't lay eggs",
+      "accept": [
+        "roosters dont lay eggs",
+        "roosters do not lay eggs",
+        "it doesnt",
+        "neither"
+      ]
+    },
+    {
+      "id": 141,
+      "difficulty": "hard",
+      "riddle": "I read the same forwards, backwards,\nand even upside down.\nWhat four-letter word am I?",
+      "answer": "noon",
+      "accept": [
+        "noon"
+      ]
+    },
+    {
+      "id": 142,
+      "difficulty": "hard",
+      "riddle": "There are three apples in a bowl\nand you take away two.\nHow many do you have?",
+      "answer": "two",
+      "accept": [
+        "two",
+        "2"
+      ]
+    },
+    {
+      "id": 143,
+      "difficulty": "hard",
+      "riddle": "Brothers and sisters I have none,\nbut this man's father\nis my father's son.\nWho is the man in the picture?",
+      "answer": "my son",
+      "accept": [
+        "my son",
+        "his son",
+        "son",
+        "your son"
+      ]
+    },
+    {
+      "id": 144,
+      "difficulty": "hard",
+      "riddle": "I am a nine-letter word.\nTake away my whole\nand some of me still remains.\nWhat am I?",
+      "answer": "wholesome",
+      "accept": [
+        "wholesome"
+      ]
+    },
+    {
+      "id": 145,
+      "difficulty": "hard",
+      "riddle": "I hang down through the winter\nand drip away in the spring,\nmade of frozen water.\nWhat am I?",
+      "answer": "an icicle",
+      "accept": [
+        "icicle"
+      ]
+    },
+    {
+      "id": 146,
+      "difficulty": "hard",
+      "riddle": "The harder you struggle against me,\nthe faster you sink.\nWhat am I?",
+      "answer": "quicksand",
+      "accept": [
+        "quicksand"
+      ]
+    },
+    {
+      "id": 147,
+      "difficulty": "hard",
+      "riddle": "I have branches and I have leaves,\nbut no bark and no wood.\nYou'll find me in your family.\nWhat am I?",
+      "answer": "a family tree",
+      "accept": [
+        "family tree",
+        "the family tree"
+      ]
+    },
+    {
+      "id": 148,
+      "difficulty": "hard",
+      "riddle": "A woman has seven daughters,\nand each daughter has one brother.\nHow many children are there?",
+      "answer": "eight",
+      "accept": [
+        "eight",
+        "8",
+        "eight children"
+      ]
+    },
+    {
+      "id": 149,
+      "difficulty": "hard",
+      "riddle": "Before Mount Everest was ever discovered,\nwhat was the tallest mountain on Earth?",
+      "answer": "Mount Everest",
+      "accept": [
+        "mount everest",
+        "everest",
+        "it was still everest"
+      ]
+    },
+    {
+      "id": 150,
+      "difficulty": "hard",
+      "riddle": "I have a bottom at my very top.\nWhat am I?",
+      "answer": "your legs",
+      "accept": [
+        "legs",
+        "your legs"
       ]
     }
   ]
