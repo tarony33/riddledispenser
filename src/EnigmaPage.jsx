@@ -10,7 +10,7 @@ import { ADSENSE_CLIENT, AD_SLOTS, SITE_URL } from "./config.js";
 const BG = "/fairground.jpg";
 const POSTER = "/poster.png";
 const VIDEO_SRC = "/machine.mp4";
-const USE_VIDEO = true; // new higher-quality animation loop
+const USE_VIDEO = true; // plays only on "Ask a Riddle" press, not on page load
 const RIDDLE_SECONDS = 30;
 const GOLD = "#C9A24B", GOLD_HI = "#EBD08A";
 const ACCENT = "#E0342A", GREEN = "#5CE05C";
@@ -49,7 +49,7 @@ export default function EnigmaPage() {
   useEffect(() => { musicRef.current = musicOn; }, [musicOn]);
   useEffect(() => { if (musicOn) { if (gestured.current) startMusic(); } else stopMusic(); }, [musicOn]);
   useEffect(() => {
-    const v = videoRef.current; if (v) { v.loop = true; v.muted = true; try { v.play(); } catch (e) {} }
+    const v = videoRef.current; if (v) { v.muted = true; } // no autoplay on load — video only plays once "Ask a Riddle" is pressed (see newRiddle())
     if ("speechSynthesis" in window) { window.speechSynthesis.getVoices(); window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices(); }
     const kick = () => { gestured.current = true; if (musicRef.current) startMusic(); };
     window.addEventListener("pointerdown", kick, { once: true });
@@ -150,7 +150,7 @@ export default function EnigmaPage() {
       <div className={RENDER ? undefined : "mWrapOuter"} style={RENDER ? { width: "100%", maxWidth: "100%" } : ui.machineWrapOuter} onClick={tap}>
         <div style={ui.machineWrap}>
           <img src={POSTER} alt="The Enigma riddle machine" style={ui.poster} draggable="false" />
-          {USE_VIDEO && <video ref={videoRef} src={VIDEO_SRC} style={{ ...ui.video, opacity: vidReady ? 1 : 0 }} muted loop autoPlay playsInline preload="auto" onPlaying={() => setVidReady(true)} />}
+          {USE_VIDEO && <video ref={videoRef} src={VIDEO_SRC} style={{ ...ui.video, opacity: vidReady ? 1 : 0 }} muted playsInline preload="auto" onPlaying={() => setVidReady(true)} />}
           {phase === "hook" && <div style={ui.hook}>Can you solve it?</div>}
           {phase === "idle" && <div style={ui.tapChip}>tap for a riddle &#10022;</div>}
           {working && <div style={ui.working}>summoning&hellip;</div>}
